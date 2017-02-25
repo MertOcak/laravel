@@ -12,13 +12,19 @@
 */
 
 Route::get('/', function () {
-	return view('welcome');
-});
 
-Route::get('about',function(){
+	$tasks = [
 
-	return view('about');
+	'Go to the store',
 
-});
+	'Finish my screencast',
 
-Route::get('/contact','PagesController@about');
+	'Clean the house'
+
+
+	];
+
+	return view('welcome',compact('tasks'));
+}
+
+);
