@@ -9,5 +9,16 @@
 	<li>{{ $task }}</li>
 @endforeach
 </ul>
+{{-- 
+
+@if
+
+@endif
+
+@while
+
+@endwhile
+
+ --}}
 </body>
 </html>
