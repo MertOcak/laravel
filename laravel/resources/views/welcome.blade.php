@@ -2,14 +2,13 @@
 <html lang="tr">
 <head>
 	<meta charset="UTF-8">
-	<title>Welcome to Laravel</title>
+	<title>Welcome to PiedPier Co.</title>
 	<style>
 		#welcome{
 			margin-left: auto;
 			margin-right: auto;
 			position: relative;
 			margin-top: 10px;
-			margin-bottom: 200px;
 			width: 100%;
 			height: 100%;
 			color: #666;
@@ -51,10 +50,18 @@
 		h1{
 			text-align: center;
 		}
+		img{
+			float: right;
+			clear: both;
+			display: block;
+			position: relative;
+			margin-top: -75px;
+		}
 	</style>
 </head>
 <body>
-	<h1>Welcome to Laravel</h1>
+	<h1>Welcome <br> PiedPiper.Co</h1>
+	<img width="100px" src="http://store.hbo.com/imgcache/product/resized/000/800/957/catl/silicon-valley-pied-piper-mouse-pad-858_1000.jpg?k=d0ab6436&pid=800957&s=catl&sn=hbo" alt="PiedPiper">
 	<a href="/" class="active">Home</a> | 
 	<a href="about">About</a>
 	<hr>
