@@ -11,13 +11,25 @@
 |
 */
 
+use App\Task;
+
+Route::get('/',function(){
+
+	$tasks = DB::table('tasks')->latest()->get();
+
+	return view('welcome',compact('tasks'));
+
+});
+
 Route::get('/tasks', function () {
 
 	// $tasks = DB::table('tasks')->get();
 
 	// $tasks = DB::table('tasks')->where('created_at','<','2017-02-26 12:38:58')->get();
 
-	$tasks = DB::table('tasks')->latest()->get();
+	// $tasks = DB::table('tasks')->latest()->get();
+
+	$tasks = Task::all();
 
 	return view('tasks.index',compact('tasks'));
 
@@ -31,9 +43,11 @@ Route::get('/tasks/{task}',function($id){
 
 	// $tasks = DB::table('tasks')->latest()->get();
 
-	$task = DB::table('tasks')->find($id);
+	// $task = DB::table('tasks')->find($id);
 
 	// dd($task);
+
+	$task = Task::find($id);
 
 	return view('tasks.show',compact('task'));
 

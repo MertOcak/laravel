@@ -4,11 +4,16 @@
 	<title>Welcome</title>
 </head>
 <body>
-<ul>
-@foreach ($tasks as $task)
-	<li>{{ $task->body }}</li>
-@endforeach
-</ul>
+	@if(isset($tasks))
+	<ul>
+		@foreach ($tasks as $task)
+		<li>{{ $task->body }}</li>
+		@endforeach
+	</ul>
+	@else
+	<h1>Welcome</h1>
+	<h3>Nothing Found To List</h3>
+	@endif
 {{-- 
 
 @if
@@ -19,6 +24,6 @@
 
 @endwhile
 
- --}}
+--}}
 </body>
 </html>
