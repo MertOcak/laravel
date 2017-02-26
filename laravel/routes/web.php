@@ -11,15 +11,34 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/tasks', function () {
 
-	$tasks = DB::table('tasks')->get();
+	// $tasks = DB::table('tasks')->get();
 
-	return view('welcome',compact('tasks'));
+	// $tasks = DB::table('tasks')->where('created_at','<','2017-02-26 12:38:58')->get();
+
+	$tasks = DB::table('tasks')->latest()->get();
+
+	return view('tasks.index',compact('tasks'));
 
 }
 
 );
+
+Route::get('/tasks/{task}',function($id){
+
+	// dd($id);
+
+	// $tasks = DB::table('tasks')->latest()->get();
+
+	$task = DB::table('tasks')->find($id);
+
+	// dd($task);
+
+	return view('tasks.show',compact('task'));
+
+
+});
 
 Route::get('about',function(){
 
