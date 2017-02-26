@@ -6,12 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Task extends Model
 {
+	// public static function incomplete(){
 
-	public function isComplete(){
+
+	// 	return static::where('completed',0)->get();
 
 
-		return false;
+	// }
 
+	public function scopeIncomplete($query) {
+
+		return $query->where('completed',0);
+		
 	}
-
 }
