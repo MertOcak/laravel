@@ -13,18 +13,28 @@
 
 Route::get('/', function () {
 
-	$tasks = [
-
-	'Go to the store',
-
-	'Finish my screencast',
-
-	'Clean the house'
-
-
-	];
+	$tasks = DB::table('tasks')->get();
 
 	return view('welcome',compact('tasks'));
+
 }
 
 );
+
+Route::get('about',function(){
+
+	$tasks = [
+
+	'Turn off the lights',
+
+	'Go to the supermarket',
+
+	'Watch \' John Wick Chapter 2\' ',
+
+	'Wash the car'
+
+	];
+
+	return view('about')->with('tasks',$tasks);
+
+});
