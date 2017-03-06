@@ -14,9 +14,8 @@ class TasksController extends Controller
 
 	}
 
-	public function show($id){
-
-		$task = Task::find($id);
+	public function show(Task $task){ // Task::find($id);
+	
 
 		return view('tasks.show',compact('task'));
 
