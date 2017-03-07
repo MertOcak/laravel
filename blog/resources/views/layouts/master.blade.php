@@ -12,8 +12,9 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
+
   <!-- Custom styles for this template -->
-  <link href="http://blog.dev/css/blog.css" rel="stylesheet">
+  <link href="/css/blog.css" rel="stylesheet">
 </head>
 
 <body>
