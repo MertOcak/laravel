@@ -12,8 +12,9 @@ class PostsController extends Controller
 
     }
 
-    public function show(){
+    public function show($id){
 
     	return view('posts.show');
+
     }
 }
