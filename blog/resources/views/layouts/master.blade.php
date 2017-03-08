@@ -8,7 +8,7 @@
   <meta name="author" content="">
   <link rel="icon" href="../../favicon.ico">
 
-  <title>Blog Template for Bootstrap</title>
+  <title>My Blog</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
@@ -23,8 +23,8 @@
 
   <div class="blog-header">
     <div class="container">
-      <h1 class="blog-title">The Bootstrap Blog</h1>
-      <p class="lead blog-description">An example blog template built with Bootstrap.</p>
+      <h1 class="blog-title">My Blog</h1>
+      <p class="lead blog-description">Online Daily Posts</p>
     </div>
   </div>
 
@@ -39,49 +39,51 @@
 
           <h2 class="blog-post-title">
 
-            @yield('title')
+           @yield('title')
 
 
-          </h2>
+         </h2>
 
 
-          @yield('body')
+         @yield('body')
+
+       </div><!-- /.blog-post -->
 
 
-          <nav class="blog-pagination">
-            <a class="btn btn-outline-primary" href="#">Older</a>
-            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
-          </nav>
+       <nav class="blog-pagination">
+        <a class="btn btn-outline-primary" href="#">Older</a>
+        <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+      </nav>
 
-        </div><!-- /.blog-main -->
+    </div><!-- /.blog-main -->
 
-        <div class="col-sm-3 offset-sm-1 blog-sidebar">
-          <div class="sidebar-module sidebar-module-inset">
+    <div class="col-sm-3 offset-sm-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
 
-            @yield('about')
-
-
-          </div>
-          <div class="sidebar-module">
+        @include('widgets.about')
 
 
-            @yield('archieves')
+      </div>
+      <div class="sidebar-module">
 
 
-          </div>
-          <div class="sidebar-module">
+        @include('widgets.allPosts')
+      
+
+      </div>
+      <div class="sidebar-module">
 
 
-            @yield('elsewhere')
+        @include('widgets.elsewhere')
 
-          
-          </div>
-        </div><!-- /.blog-sidebar -->
 
-      </div><!-- /.row -->
+      </div>
+    </div><!-- /.blog-sidebar -->
 
-    </div><!-- /.container -->
+  </div><!-- /.row -->
 
-    @include('layouts.footer')
-  </body>
-  </html>
+</div><!-- /.container -->
+
+@include('layouts.footer')
+</body>
+</html>
