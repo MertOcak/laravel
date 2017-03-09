@@ -24,4 +24,50 @@ class PostsController extends Controller
     	return view('posts.show',compact('post','allPosts'));
 
     }
+
+    public function create(){
+
+    	return view('posts.create');
+
+    }
+
+    public function store(){
+
+        // dd(request()->all());
+        
+        // dd(request('title')); 
+        
+        // dd(request('body'));        
+
+        // dd(request(['title', 'body']));
+  
+             
+
+        // Create a new post using the request data
+
+        // $post = new Post;
+
+        // $post->title = request('title');
+
+        // $post->body = request('body');
+
+
+        // Save it to the database
+
+        // $post->save();
+
+        // Post::create([
+
+        // 'title' => request('title'),
+
+        // 'body' => request('body')
+
+        //     ]);
+
+        Post::create(request(['title','body']));
+
+        // And then redirect it to the homepage
+
+        return redirect('/');
+    }
 }
