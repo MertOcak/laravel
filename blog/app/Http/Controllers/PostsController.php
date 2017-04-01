@@ -33,8 +33,17 @@ class PostsController extends Controller
 
     public function store(){
 
+        $this->validate(request,[
 
-        Post::create(request(['title','body']));
+            'body' => required,
+            'title' => required
+
+            ]);
+
+
+
+
+        Post::create(request(['title'],['body']));
 
 
         return redirect('/');
